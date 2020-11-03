@@ -15,3 +15,6 @@ Anothere issue
 4) Branches to build : leave blank [earlier it was master]
 
 Build failed unknown reason - build again
+Error : 
+  SEVERE  c.c.j.p.k.KubernetesCredentialProvider#startWatchingForSecrets: Failed to initialise k8s secret provider, secrets from Kubernetes will not be available
+
