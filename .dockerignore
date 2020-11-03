@@ -3,3 +3,5 @@ info.html
 docker-compose.yml
 Jenkinsfile
 Dockerfile
+getweb_deploy.yaml
+gtweb.yaml
