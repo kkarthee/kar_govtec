@@ -34,7 +34,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "gtweb.yaml", kubeconfigId: "mykubernetes")
+          kubernetesDeploy(configs: "gtweb.yaml", kubeconfigId: "mykubernetesid")
         }
       }
     }
