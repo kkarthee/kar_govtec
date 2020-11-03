@@ -13,3 +13,5 @@ Anothere issue
 2) Name: origin
 3) Refspec: +refs/pull/*:refs/remotes/origin/pr/*
 4) Branches to build : leave blank [earlier it was master]
+
+Build failed unknown reason - build again
