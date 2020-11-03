@@ -21,4 +21,6 @@ Error :
   Add Path to fix git issue Manage Jenkins -> Gloval Tool executable -> /usr/bin/git
   
   Created master branch
+  
+  Docker folder path added 
 
