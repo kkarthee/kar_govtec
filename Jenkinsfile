@@ -37,7 +37,7 @@ pipeline {
             sh 'ssh -v root@192.168.5.30'
             sh 'scp getweb_deploy.yaml root@192.168.5.30:/home/developer/base'
             sh 'ssh -o StrictHostKeyChecking=no root@192.168.5.30 kubectl apply -f /home/developer/base/getweb_deploy.yaml -n jenkins'
-            kubectl patch deployment  myapp-deployment -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}" -n jenkins
+            sh 'ssh -o StrictHostKeyChecking=no root@192.168.5.30 kubectl patch deployment  myapp-deployment -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}" -n jenkins'
          }
       }
     }
