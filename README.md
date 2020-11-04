@@ -19,4 +19,6 @@ Error :
   SEVERE  c.c.j.p.k.KubernetesCredentialProvider#startWatchingForSecrets: Failed to initialise k8s secret provider, secrets from Kubernetes will not be available
   
   Add Path to fix git issue Manage Jenkins -> Gloval Tool executable -> /usr/bin/git
+  
+  Started at 9:30 -- kubernetes issue
 
