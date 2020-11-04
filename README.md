@@ -30,3 +30,4 @@ Error :
   
   Woke up 9
 
+  Trying kubectl sh at 2pm
