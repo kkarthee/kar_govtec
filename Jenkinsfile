@@ -31,6 +31,7 @@ pipeline {
         }
     
       stage("Deploy App") {
+        steps {
         sshagent(credentials : ['sshauth']) {
             sh 'ssh -o StrictHostKeyChecking=no user@hostname.com uptime'
             sh 'ssh -v StrictHostKeyChecking=no root@192.168.5.30 uptime'
@@ -39,3 +40,4 @@ pipeline {
       }
     }
   }
+}
