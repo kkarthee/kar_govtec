@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: calinrus/hit-counter
+        image: kkarthee/gtweb
         ports:
         - containerPort: 5000
         resources:
