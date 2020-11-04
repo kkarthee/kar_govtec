@@ -21,4 +21,5 @@ Error :
   Add Path to fix git issue Manage Jenkins -> Gloval Tool executable -> /usr/bin/git
   
   Started at 9:30 -- kubernetes issue
+  Added kubeconfig
 
