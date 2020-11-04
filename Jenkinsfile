@@ -29,7 +29,6 @@ pipeline {
                 }
             }
         }
-
     
       steps{
         sshagent(credentials : ['sshauth']) {
