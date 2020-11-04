@@ -35,7 +35,7 @@ pipeline {
         sshagent(credentials : ['sshauth']) {
             sh 'ssh -o StrictHostKeyChecking=no root@192.168.5.30 uptime'
             sh 'ssh -v root@192.168.5.30'
-            'sed -i "s/gtweb/gitweb:${env.BUILD_ID}/g" getweb_deploy.yaml'
+            sh 'sed -i "s/gtweb/gitweb:${env.BUILD_ID}/g" getweb_deploy.yaml'
             sh 'scp getweb_deploy.yaml root@192.168.5.30:/home/developer/base'
             sh 'ssh -o StrictHostKeyChecking=no root@192.168.5.30 kubectl apply -f /home/developer/base/getweb_deploy.yaml -n jenkins'
          }
