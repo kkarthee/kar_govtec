@@ -24,5 +24,9 @@ Error :
   
   Docker folder path added 
   
-  4:40 am crashed my jenkins server rebuild it :)
+  4:40 am crashed my jenkins server rebuild it
+  
+  Slept 6:30:)
+  
+  Woke up 9
 
