@@ -18,9 +18,6 @@ spec:
       - name: myapp
         image: kkarthee/gtweb
         imagePullPolicy: Always
-        env:
-        - name: BUILDTIME
-          value: test
         ports:
         - containerPort: 5000
         resources:
