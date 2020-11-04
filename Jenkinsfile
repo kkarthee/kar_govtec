@@ -31,14 +31,13 @@ pipeline {
         }
 
     
-    stage('Deploy App') {
-      steps {
-        script {
-          kubernetesDeploy(configs: "gtweb.yaml", kubeconfigId: "mykubernetesid")
-        }
+      steps{
+        sshagent(credentials : ['sshauth']) {
+            sh 'ssh -o StrictHostKeyChecking=no user@hostname.com uptime'
+            sh 'ssh -v StrictHostKeyChecking=no root@192.168.5.30 uptime'
+            sh 'scp gtweb.yaml root@192.168.5.30:/home/developer/base'
+         }
       }
     }
-
   }
-
 }
