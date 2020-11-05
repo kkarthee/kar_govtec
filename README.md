@@ -1,25 +1,13 @@
-# kar_govtec
-Karthik Test for testing from org XXX
-I am the owner
-Testin
-g now
-4th Nov 2020 - 00:03
-4th Nov 2020 - 00:14
-4th Nov 2020 - 00:50
-Auth issue Fixed at 1:27 
-lightweight checkout issue (unchecked in pipeline field)
-Anothere issue
-1) select Git
-2) Name: origin
-3) Refspec: +refs/pull/*:refs/remotes/origin/pr/*
-4) Branches to build : leave blank [earlier it was master]
 
-Build failed unknown reason - build again
-Error : 
-  SEVERE  c.c.j.p.k.KubernetesCredentialProvider#startWatchingForSecrets: Failed to initialise k8s secret provider, secrets from Kubernetes will not be available
-  
-  Add Path to fix git issue Manage Jenkins -> Gloval Tool executable -> /usr/bin/git
-  
-  Started at 9:30 -- kubernetes issue
-  Added kubeconfig
 
+<p>Code is developed in Github and connected with Jenkins . This integration is achieved using ngrok .Once code is developed and pushed it will start processing. The process is like downloding code and checking out. Same system docker is installed and the docker plugin installed with the Jenkin application. That helps to build image and push image to my personal docker repository. In jenkins I have installed docker kubernetes and SSH plugins. Same way credentials are created . SSH - key authentication . Kubernetes - certificate (pfx). Docker - username and password .</p>
+
+In local the code be tested using following command ( Docker installed machine)
+```
+git clone github.com/kkarthee/kar_govtec.git
+cd kar_govtecdocker build -t gtweb:38 .
+docker tag gtweb kkarthee/gtwebdocker-compose up -d 
+```
+To deploy using kubernetes I am pushing the code to my repository ```docker push registry.hub.docker.com/kkarthee/gtweb:38```.
+
+I have chosen bare metal kubernetes for deployment. Kubernetes environment Single node cluster ( I am not using minikube as it is not scalable and not tolerant) . Any time we can add more kubernetes nodes and share load to nodes. Which is an idle condition for our scenario. Application deployment is done running remote commands from Jenkins server. Once deployed we can see the deployment using  kuberentes server ```watch kubectl get pod -n jenkins```. This app is deployed in Jenkins namspace. Thanks.
