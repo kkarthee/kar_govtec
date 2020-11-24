@@ -11,4 +11,5 @@ docker tag gtweb kkarthee/gtwebdocker-compose up -d
 To deploy using kubernetes I am pushing the code to my repository ```docker push registry.hub.docker.com/kkarthee/gtweb:38```.
 
 I have chosen bare metal kubernetes for deployment. Kubernetes environment Single node cluster ( I am not using minikube as it is not scalable and not tolerant) . Any time we can add more kubernetes nodes and share load to nodes. Which is an idle condition for our scenario. Application deployment is done running remote commands from Jenkins server. Once deployed we can see the deployment using  kuberentes server ```watch kubectl get pod -n jenkins```. This app is deployed in Jenkins namspace. Thanks.
-Test 24th Nov
+Test 24th.
+Test 24thNov -1 
